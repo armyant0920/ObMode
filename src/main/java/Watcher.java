@@ -1,4 +1,3 @@
-import java.util.Observable;
 import java.util.Random;
 
 public class Watcher implements Observer {
@@ -28,6 +27,9 @@ public class Watcher implements Observer {
         obj.register(this);
 
 
+
+
+
     }
 
     @Override
@@ -40,12 +42,12 @@ public class Watcher implements Observer {
     @Override
     public void update() {
 
-        getFeedback();
+        feedBack();
 
     }
 
-    public void getFeedback() {
-        System.out.printf("%s level:%d,score=%d\n", name, level, score.getScore());
+    public void feedBack() {
+        System.out.printf("%s level:%d,score=%d,tag=%s,pass?%s\n", name, level, score.getScore(),score.getTag(),(score.getScore()>level)?true:false);
 
     }
 }

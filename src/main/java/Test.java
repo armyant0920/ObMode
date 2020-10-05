@@ -31,8 +31,11 @@ public class Test {
 
 
                 }else{
-                    throw  new RuntimeException();
+                    System.out.println("值異常");
                 }
+
+            }else if(input.hasNext()){
+                score.setTag(input.next());
 
             }
 
